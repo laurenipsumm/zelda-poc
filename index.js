@@ -1,7 +1,9 @@
 const { PeerServer } = require("peer");
+const WS_PORT = process.env.PORT;
+
 
 const peerServer = PeerServer({
-  port: 3000, key:"demodemo", path: "/myapp",
+  port: WS_PORT, key:"demodemo", path: "/myapp",
   allow_discovery: true,
 });
 
@@ -14,4 +16,4 @@ peerServer.on("disconnect", c => {
   console.log("disconnect!", c.id)
 })
 
-console.log("running")
+console.log("running on port", WS_PORT)
