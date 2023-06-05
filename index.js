@@ -1,7 +1,7 @@
 const { PeerServer } = require("peer");
 
 const peerServer = PeerServer({
-  port: 9000, key:"demodemo", path: "/myapp",
+  port: 3000, key:"demodemo", path: "/myapp",
   allow_discovery: true,
 });
 
